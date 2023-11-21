@@ -1,0 +1,30 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import  { getProjects } from '../lib/projects'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const projects = await getProjects();
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h1>Hello!</h1>
+			<p>
+        I am Aniketh <strong>AKA</strong> Ani, and I'm a 16 year old developer.
+			</p>
+			<p>Here are some of my projects:</p>
+			<ul>
+        {projects.map(project => <a href={project.link}> <li> <strong>{project.repo}</strong> - {project.description} </li> </a>)}
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>
