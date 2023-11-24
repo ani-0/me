@@ -34,7 +34,7 @@ export async function getProjects(): Promise<Project[]> {
 		},
 		{
 			repo: 'CCHS Open Curriculum',
-			link: 'https://github.com/ani-0/cchs-open-curriculum',
+			link: 'https://github.com/ani-0/creek-ocw',
 			description: 'Open Curriculum for Cherry Creek High School',
 		},
 		{
@@ -45,11 +45,11 @@ export async function getProjects(): Promise<Project[]> {
 		{
 			repo: 'Twitter Clone',
 			link: 'https://github.com/ani-0/twitter',
-			description: 'A all in one twitter clone made with Next.js, Tailwind CSS and ShadcnUI',
+			description: 'A all in one twitter clone made with Go and Svelte',
 		},
 		{
 			repo: 'dots',
-			link: 'https://github.com/ani-0/dots',
+			link: 'https://github.com/ani-0/dotfiles',
 			description: 'My dotfiles',
 		},
 	];
